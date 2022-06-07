@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+    root 'blogs#index'
+
   resources :blogs
-  #get 'home/index'
-  root 'home#index'
-    get 'schedule', to: 'home#schedule'
+  get 'schedule', to: 'home#schedule'
+  resources :blogs, only: [:show]
 end  
 
 
