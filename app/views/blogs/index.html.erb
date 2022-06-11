@@ -1,6 +1,13 @@
 <p style="color: green"><%= notice %></p>
 <h1>Post your message</h1>
 
+  <div class="jumbotron" id="home-container text-center">
+    <div class="container container-fluid bg-secondary text-center">
+      <h1 class="display-4">Fluid jumbotronnn</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+
 <div id="blogs">
   <% @blogs.each do |blog| %>
     <%= render blog %>
@@ -9,5 +16,25 @@
     </p>
   <% end %>
 </div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.description %></td>
+        <td>Placeholder</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> 
 
 <%= link_to "New blog", new_blog_path %>

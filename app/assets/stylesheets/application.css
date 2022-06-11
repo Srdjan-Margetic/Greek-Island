@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar {
+  background-color: black !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  background: url('app/assets/images/greeklogo.png');
+  color: white;
+  background-color: blue;
+  width: 100px;
+  height: 50px;
+}
+
+#home-container {
+  margin-top: 25px;
+  background-image: asset-url('greeekisland-hero.jpg') !important;
+}
+
+.jumbotron {
+  background: asset-url('greeklogo.png') !important;
+}
