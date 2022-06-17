@@ -5,3 +5,36 @@
     <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
   </div>
 </div>
+
+
+
+# <div id="blogs">
+#   <% @blogs.each do |blog| %>
+#     <%= render blog %>
+#     <p>
+#       <%= link_to "Show this blog", blog %>
+#     </p>
+#   <% end %>
+# </div>
+
+# <table>
+#   <thead>
+#     <tr>
+#       <th>Title</th>
+#       <th>Description</th>
+#       <th>Actions</th>
+#     </tr>
+#   </thead>
+
+#   <tbody>
+#     <% @blogs.each do |blog| %>
+#       <tr>
+#         <td><%= blog.title %></td>
+#         <td><%= blog.description %></td>
+#         <td>Placeholder</td>
+#       </tr>
+#     <% end %>
+#   </tbody>
+# </table> 
+
+# <%= link_to "New blog", new_blog_path %>

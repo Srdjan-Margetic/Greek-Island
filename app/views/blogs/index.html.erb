@@ -1,40 +1,21 @@
 <p style="color: green"><%= notice %></p>
-<h1>Post your message</h1>
 
-  <div class="jumbotron" id="home-container text-center">
-    <div class="container container-fluid bg-secondary text-center">
-      <h1 class="display-4">Fluid jumbotronnn</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+<div id="page-content">
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid" id="home-container">
+      <div class="container text-center text-white">
+        <h1 class="display-4">Greek island</h1>
+        <p class="lead">Please log in to see or change your schedule or to see any updates</p>
+        <button type="button" class="btn btn-primary">Sign up</button>
+      </div>
     </div>
   </div>
-
-<div id="blogs">
-  <% @blogs.each do |blog| %>
-    <%= render blog %>
-    <p>
-      <%= link_to "Show this blog", blog %>
-    </p>
-  <% end %>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.description %></td>
-        <td>Placeholder</td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> 
-
-<%= link_to "New blog", new_blog_path %>
+<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white">
+  <div class="container text-center">
+    <small>Copyright &copy; Irritating colleague
+</small>
+  </div>
+</footer>
