@@ -43,7 +43,7 @@
 .jumbotron {
 
   background-size: cover;
-  background: url('/assets/greekisland-hero.jpg') no-repeat center center ;
+  background: url('/assets/') no-repeat center center ;
 
   height: 600px;
   /* background-color: gray; */
