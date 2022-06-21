@@ -23,31 +23,24 @@
 }
 
 #logo {
-  float: left;
-  color: white;
-  background: url('/assets/greeklogo.png') !important;
-  background-position: center center;
+  /* color: white; */
+  background: url('/assets/greeklogo.png') no-repeat center center ;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-color: green;
-
-  background-size: cover;
+  width: 50px;
+  height: 30px;
+  margin-left: 10px;
 }
 
 #home-container {
   margin-top: 25px;
-  /* background-image: asset-url('greeklogo.png') !important;  */
-  background: url('greekisland-hero.jpg') no-repeat center center;
-  background-image: url('greekisland-hero.jpg') no-repeat center center !important;
-  background-image: url('~/app/assets/images/greekisland-hero.jpg') no-repeat center center !important; 
+  background: url('/assets/greekisland-hero.jpg') no-repeat center center;
+
   background-size: cover;
   height: 600px;
-  background-color: red;
 }
 
 .jumbotron {
-  /* background: asset-url('app/assets/stylesheets/greekisland-hero.jpg') !important; */
-  background: asset-url('greeekisland-hero.jpg') no-repeat center center !important;
+  background: url('/app/assets/images/greeekisland-hero.jpg') no-repeat center center;
   background-size: cover;
   height: 600px;
   background-color: gray;
