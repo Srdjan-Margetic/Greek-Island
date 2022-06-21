@@ -33,16 +33,19 @@
 
 #home-container {
   margin-top: 25px;
-  background: url('/assets/greekisland-hero.jpg') no-repeat center center;
+
+  background: url('/assets/greekisland-hero.jpg') no-repeat center center ;
 
   background-size: cover;
   height: 600px;
 }
 
 .jumbotron {
-  background: url('/app/assets/images/greeekisland-hero.jpg') no-repeat center center;
+
   background-size: cover;
+  background: url('/assets/greekisland-hero.jpg') no-repeat center center ;
+
   height: 600px;
-  background-color: gray;
+  /* background-color: gray; */
 
 }
