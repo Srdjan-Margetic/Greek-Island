@@ -1,43 +1,48 @@
-<p style="color: green"><%= notice %></p>
-<h1>Post your message</h1>
+<h1 class="text-center mt-4">All comments</h1>
 
-<div class="container" >
-  <div class="jumbotron text-center" >
-    <div class="container container-fluid bg-secondary text-center text-white" id="home-container">
-      <h1 class="display-4">Fluid jumbotronnn</h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-      <a class="btn btn-success btn-lg" href="#" role-"button">Sign up!</a>
-    </div>
-  </div>
-</div>
-
-<div id="blogs">
+<div class="container">
   <% @blogs.each do |blog| %>
-    <%= render blog %>
-    <p>
-      <%= link_to "Show this blog", blog %>
-    </p>
+    <div class="row">
+      <div class="col-8">
+        <div class="card text-center">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= blog.title %></h5>
+            <p class="card-text"><%= blog.description %></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-muted">
+            2 days ago
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
+  
 
-  <tbody>
-    <% @blogs.each do |blog| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.description %></td>
-        <td>Placeholder</td>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table> 
+    </thead>
 
-<%= link_to "New blog", new_blog_path %>
+    <tbody>
+      <% @blogs.each do |blog| %>
+        <tr>
+          <td><%= blog.title %></td>
+          <td><%= blog.description %></td>
+          <td>Placeholder</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table> 
+
+  <%= link_to "New blog", new_blog_path %>
+
