@@ -1,4 +1,4 @@
-<div class="index-wrapper pb-3">
+<div class="index-wrapper">
   <h1 class="text-center mt-4">All comments</h1>
   <div class="container">
     <% @blogs.each do |blog| %>
@@ -13,7 +13,7 @@
               <p class="card-text"><%= truncate(blog.description, length: 100) %></p>
               <%= link_to "View", blog_path(blog), class: "btn btn-outline-primary" %> 
               <%= link_to "Edit", edit_blog_path(blog), class: "btn btn-outline-success" %> 
-              <%= link_to "Delete", blog_path(blog), data: {turbo_confirm: "Are you sure?", method: :destroy}, class: "btn btn-outline-danger" %> 
+              <%= link_to "Delete", blog_path(blog), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-outline-danger" %> 
             </div>
             <div class="card-footer text-muted">
               <small>Created <%= time_ago_in_words(blog.created_at) %> ago,

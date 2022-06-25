@@ -38,6 +38,6 @@ class BlogsTest < ApplicationSystemTestCase
     visit blog_url(@blog)
     click_on "Destroy this blog", match: :first
 
-    assert_text "Blog was successfully destroyed"
+    assert_text "Blog was successfully deleted"
   end
 end
