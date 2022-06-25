@@ -70,3 +70,8 @@ body {
   flex: 1 0 auto;
   background-color: lightblue;
 }
+
+.submit-button {
+  width: 25%;
+  justify-content: center;
+}

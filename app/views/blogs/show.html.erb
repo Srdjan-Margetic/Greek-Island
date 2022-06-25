@@ -1,10 +1,33 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @blog %>
-
-<div>
-  <%= link_to "Edit this blog", edit_blog_path(@blog) %> |
+<div class="index-wrapper">
+ <%= render 'shared/message' %>
+  <h1 class="text-center mt-4"><%=  @blog.title %></h1>
+  <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-8 mt-4">
+          <div class="card text-center shadow bg-white rounded">
+            <div class="card-header fst-italic">
+              by Srdjan
+            </div>
+            <div class="card-body">
+              <div class="card-text text-start"><%= simple_format(@blog.description) %></div>
+              <%= link_to "Edit", edit_blog_path(@blog), class: "btn btn-outline-success" %> 
+              <%= link_to "Delete", blog_path(@blog), data: {turbo_confirm: "Are you sure?", method: :destroy}, class: "btn btn-outline-danger" %> 
+            </div>
+            <div class="card-footer text-muted">
+              <small>Created <%= time_ago_in_words(@blog.created_at) %> ago,
+              edited <%= time_ago_in_words(@blog.updated_at) %> ago
+              </small> 
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
   <%= link_to "Back to blogs", blogs_path %>
-
+  <%= link_to "New blog", new_blog_path %>
   <%= button_to "Destroy this blog", @blog, method: :delete, data: {confirm: "Are you sure?"} %>
 </div>
+
+
+
+
+
