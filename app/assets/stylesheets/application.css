@@ -48,7 +48,8 @@ body {
 
 #home-container {
   margin-top: 25px;
-  background: url('/assets/greek.jpg') no-repeat center center ;
+  /* background: url('/assets/greek.jpg') no-repeat center center ; */
+  background-image: url('greek.jpg') no-repeat center center ;
   background-size: cover;
   height: 60vh;
   width: 100%;
