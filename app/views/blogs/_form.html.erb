@@ -1,6 +1,6 @@
 <div class="container">  
   <%= form_with(model: blog, class: "shadow p-3 mb-3 bg-info rounded") do |form| %>
-    <%= render 'shared/errors' %>   
+    <%= render 'shared/errors', obj: @blog %>   
     <div class="row justify-content-center">
       <div class="col-10">
         <div class="form-group row mb-4">
