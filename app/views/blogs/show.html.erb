@@ -6,7 +6,7 @@
         <div class="col-8 mt-4">
           <div class="card text-center shadow bg-white rounded">
             <div class="card-header fst-italic">
-              by Srdjan
+              <%= blog.user.username %>
             </div>
             <div class="card-body">
               <div class="card-text text-start"><%= simple_format(@blog.description) %></div>
